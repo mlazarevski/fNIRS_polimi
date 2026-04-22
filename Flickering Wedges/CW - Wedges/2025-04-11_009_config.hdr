@@ -1,0 +1,39 @@
+[GeneralInfo]
+Version=2023.9.3-1-g01ca56fc
+Device ID=2346_0749_A
+Date=2025-04-11 16:42:19.966378
+Sources=8
+Detectors=15
+Sampling rate=10.172526041666666
+Amplitude details=
+S01    :  35.4%  35.4%
+S02    :  78.7%  78.7%
+S03    :  45.8%  45.8%
+S04    : 100.0% 100.0%
+S05    :  69.6%  69.6%
+S06    :  28.4%  28.4%
+S07    :  40.6%  40.6%
+S08    : 100.0% 100.0%
+triggers=[]
+
+[ExperimentNotes]
+experiment_name=
+experiment_subject=
+experiment_subject_age=
+experiment_subject_gender=
+experiment_subject_contact_info=
+experiment_remarks=
+
+[DataStructure]
+Channel Mask="# 
+1     1     0     0     0     0     0     1     0     0     0     0     0     0     0
+1     0     1     0     0     0     0     0     1     0     0     0     0     0     0
+1     1     1     1     0     0     0     0     0     1     0     0     0     0     0
+0     1     0     1     1     0     0     0     0     0     1     0     0     0     0
+0     0     1     1     0     0     1     0     0     0     0     1     0     0     0
+0     0     0     1     1     1     1     0     0     0     0     0     1     0     0
+0     0     0     0     1     1     0     0     0     0     0     0     0     1     0
+0     0     0     0     0     1     1     0     0     0     0     0     0     0     1
+#"
+Channel indices=
+0-0, 0-1, 0-7, 1-0, 1-2, 1-8, 2-0, 2-1, 2-2, 2-3, 2-9, 3-1, 3-3, 3-4, 3-10, 4-2, 4-3, 4-6, 4-11, 5-3, 5-4, 5-5, 5-6, 5-12, 6-4, 6-5, 6-13, 7-5, 7-6, 7-14
