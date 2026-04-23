@@ -272,11 +272,52 @@ Used for: TD-NIRS instrumentation / DTOF acquisition
 Status : NOT YET VERIFIED
 
 
-[torricelli2014]
-Source : Torricelli et al., NeuroImage, 2014 — "Time domain
-         functional NIRS imaging for human brain mapping"
-Used for: TD-NIRS for human brain mapping (review citation)
-Status : NOT YET VERIFIED
+[torricelli2014]   VERIFIED
+Source : Torricelli et al., NeuroImage, 85, 28-50, 2014 —
+         "Time domain functional NIRS imaging for human brain
+         mapping"
+Used for: (1) TD-NIRS as the established imaging modality
+              that enables recovery of absolute optical
+              properties (vs CW relative changes)
+          (2) supports the claim that TD-NIRS allows
+              subject- and region-specific DPF / pathlength
+              estimation
+
+> "This review is aimed at presenting the state-of-the-art of
+>  time domain (TD) functional near-infrared spectroscopy
+>  (fNIRS). [...] Issues like quantification of the hemodynamic
+>  response, penetration depth, depth selectivity, spatial
+>  resolution and contrast-to-noise ratio are critically
+>  examined."
+
+> "A TD NIRS measurement at a single source-detector distance
+>  allows a complete optical characterization of the probed
+>  tissue, without the complicated multi-distance arrangements
+>  and the cumbersome calibration procedure that are needed for
+>  CW NIRS and FD NIRS."
+
+> "TD fNIRS can be of help since, with limited assumptions on
+>  the baseline optical properties [...], average photon path
+>  length (equivalently the average time spent by photon) can
+>  be estimated in different head compartments [...] allowing
+>  for absolute estimate of absorption changes."
+
+KEY TAKEAWAY: This is the load-bearing review citation for our
+Introduction claim that TD-NIRS provides subject- and
+region-specific DPF/pathlength, addressing the CW-NIRS
+limitation. Use alongside contini2006 (instrumentation) and
+delpy1988 (the original TPSF-DPF link).
+
+BibTeX entry to add to bibliography.bib:
+@article{torricelli2014,
+  title={Time domain functional NIRS imaging for human brain mapping},
+  author={Torricelli, Alessandro and Contini, Davide and Pifferi, Antonio and Caffini, Matteo and Re, Rebecca and Zucchelli, Lucia and Spinelli, Lorenzo},
+  journal={Neuroimage},
+  volume={85},
+  pages={28--50},
+  year={2014},
+  publisher={Elsevier}
+}
 
 
 [prahl1999]   VERIFIED (page) — but our notebook numbers do NOT
