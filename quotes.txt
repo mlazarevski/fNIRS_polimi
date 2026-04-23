@@ -264,12 +264,47 @@ Methods/Discussion when we acknowledge the regional limitation.
 TO VERIFY (paste quote when checked):
 ================================================================
 
-[contini2006]
-Source : Contini et al., probably Optics Express, 2006 —
+[contini2006]   VERIFIED
+Source : Contini, Torricelli, Pifferi, Spinelli, Paglia, Cubeddu,
+         Optics Express, 14(12), 5418-5432, 2006 —
          "Multi-channel time-resolved system for functional near
          infrared spectroscopy"
-Used for: TD-NIRS instrumentation / DTOF acquisition
-Status : NOT YET VERIFIED
+Used for: TD-NIRS instrumentation / time-resolved photon
+          acquisition via TCSPC for functional brain studies
+
+> "Four parallel detection chains accomplish acquisition of
+>  time-resolved reflectance curves. Each chain consists of a
+>  compact 4-channel photomultiplier (PMT) [...] a routing
+>  electronics [...] a fast amplifier [...] and a PC board
+>  [...] for time-correlated single photon counting (TCSPC).
+>  The parallel use of the four detection and acquisition lines
+>  enables a total of 16 independent detectors."
+
+> "A novel time-resolved multi-channel system for functional
+>  studies has been described and characterized on tissue
+>  phantoms. Preliminary measurements on volunteers have been
+>  performed to validate the system performances in vivo during
+>  cuff occlusion of the muscle and during motor task experiment
+>  for human brain mapping."
+
+TERMINOLOGY NOTE: The paper says "time-resolved reflectance
+curves" R(t) — this is the SAME quantity as the DTOF / TPSF used
+elsewhere in the literature (and in our LaTeX), just under the
+older naming convention. The measurement records the temporal
+distribution of detected photons after a picosecond pulse,
+acquired via TCSPC. No semantic mismatch with our citation.
+
+BibTeX entry to FIX in bibliography.bib:
+@article{contini2006,
+  title={Multi-channel time-resolved system for functional near infrared spectroscopy},
+  author={Contini, Davide and Torricelli, Alessandro and Pifferi, Antonio and Spinelli, Lorenzo and Paglia, Paola and Cubeddu, Rinaldo},
+  journal={Optics Express},
+  volume={14},
+  number={12},
+  pages={5418--5432},
+  year={2006},
+  publisher={Optica Publishing Group}
+}
 
 
 [torricelli2014]   VERIFIED
