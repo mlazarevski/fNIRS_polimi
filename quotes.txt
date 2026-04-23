@@ -194,18 +194,99 @@ Status : NOT YET VERIFIED — note this is a webpage; consider
          alternatives
 
 
-[engel1997] / [sereno1995]   (recommended replacement for tootell1998)
-Source : Engel, Glover, Wandell, Cereb. Cortex, 1997
-         Sereno et al., Science, 1995
-Used for: V1 retinotopy via phase-encoded rotating wedges/rings
-          (closer to our flickering-wedge stimulus than tootell1998)
+[engel1997]   (recommended replacement for tootell1998)
+Source : Engel, Glover, Wandell, Cereb. Cortex, 1997 —
+         "Retinotopic organization in human visual cortex and
+         the spatial precision of functional MRI"
+Used for: V1 retinotopy via phase-encoded rotating wedges
+Status : PARTIALLY VERIFIED — paper is about visual cortex
+         retinotopy in general (no laterality content, which is
+         fine — we don't need laterality, we need "wedges drive
+         V1 retinotopy"). Need to find the methods quote
+         describing the rotating wedge / phase-encoded stimulus
+         to lock this citation in.
+
+
+================================================================
+VERIFIED ABOVE THIS LINE
+================================================================
+
+
+[duncan1996]   VERIFIED
+Source : Duncan et al., Pediatric Research, 1996 —
+         "Measurement of Cranial Optical Path Length as a
+         Function of Age Using Phase Resolved Near Infrared
+         Spectroscopy"
+Used for: (1) literature DPF reference values for adult head
+              (n=100 adults, ages 21-59, frontal, SDS=4.3 cm,
+              wavelengths 690/744/807/832 nm — see Scholkmann
+              2013 table)
+          (2) age-dependent DPF equation (precursor to
+              Scholkmann 2013)
+          (3) [NEW] regional variation citation — see below
+
+> "These values vary with wavelength and age, and have a 12-17%
+>  SD comparable to the variation of DPF measured by TOF
+>  techniques. The DPF depends upon the proportions of different
+>  scatterers and absorbers in tissue [...] Even in a group of
+>  similarly aged subjects this may be a source of substantial
+>  variation. Other differences include geometrical and anatomical
+>  factors such as head shape and optode position. Ferrari et al.
+>  (31) have demonstrated an approximately 15% variation in DPF
+>  measured by TOF between the frontal and parietal areas of
+>  adult foreheads. We have shown a 0.8% variability between
+>  repeated measurements at one site on the same subject, which
+>  discounts the spread of results being due to machine error."
+
+> "Although from this study we have recommended DPF for use with
+>  NIRS measurements in subjects of varying age, it is clear from
+>  the data that far better accuracy would be achieved by
+>  measuring individual path lengths at the time of each study."
+
+KEY TAKEAWAY: Duncan 1996 explicitly references ~15% variation
+in DPF between frontal and parietal areas. THIS is the
+load-bearing citation for our caveat that Scholkmann's
+frontal-fitted formula (and Duncan's own frontal data) may
+under/overestimate occipital DPF in our study. Use it in the
+Methods/Discussion when we acknowledge the regional limitation.
+
+
+================================================================
+TO VERIFY (paste quote when checked):
+================================================================
+
+[contini2006]
+Source : Contini et al., probably Optics Express, 2006 —
+         "Multi-channel time-resolved system for functional near
+         infrared spectroscopy"
+Used for: TD-NIRS instrumentation / DTOF acquisition
 Status : NOT YET VERIFIED
 
 
-[duncan1995] / [duncan1996]
-Source : Duncan et al., 1995/1996
-Used for: literature DPF reference values for adult head
-Status : Indirectly verified through Scholkmann 2013 table
-         (Duncan et al., n=100 adults, frontal). Worth pulling
-         the original to cite directly when reporting DPF
-         comparisons.
+[torricelli2014]
+Source : Torricelli et al., NeuroImage, 2014 — "Time domain
+         functional NIRS imaging for human brain mapping"
+Used for: TD-NIRS for human brain mapping (review citation)
+Status : NOT YET VERIFIED
+
+
+[prahl1999]
+Source : Prahl, OMLC compilation of hemoglobin extinction
+         coefficients — webpage, https://omlc.org/spectra/hemoglobin/
+Used for: HbO / HbR extinction coefficients used in MBLL
+          (1486 / 3843 at 760 nm; 2526 / 1798 at 850 nm)
+Status : PROBLEMATIC — this is a webpage compilation derived
+         from unpublished Gratzer / Kollias data.
+
+OPTIONS:
+  (a) Cite Prahl OMLC as-is (commonly accepted in fNIRS papers)
+  (b) Cite Gratzer's underlying compilation directly
+  (c) Switch to Matcher et al. 1995 (peer-reviewed, gives values
+      at 690/744/807/832 nm — close to our 760/850, would need
+      to acknowledge interpolation)
+  (d) Cite via mne / mne_nirs default tables (if we end up using
+      that library)
+
+The hemoglobin redox paper you found is NOT a substitute — it
+covers oxy/met/ferryl Hb in vascular pathology, not the HbO/HbR
+extinction values for NIR brain imaging.
