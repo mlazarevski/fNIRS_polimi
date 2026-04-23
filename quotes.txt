@@ -76,17 +76,101 @@ Used for: comparing fNIRS strengths against EEG / fMRI / MEG
 >  other neuroscience techniques."
 
 
-================================================================
-TO VERIFY (paste quote when checked):
-================================================================
-
 [scholkmann2013]
-Source : Scholkmann & Wolf, J. Biomed. Opt., 2013
+Source : Scholkmann & Wolf, J. Biomed. Opt., 2013 — "General
+         equation for the differential pathlength factor of the
+         frontal human head depending on wavelength and age"
 Used for: age- and wavelength-dependent DPF formula
           DPF = alpha + beta*age^gamma + delta*lambda^3
                 + epsilon*lambda^2 + zeta*lambda
-Status : NOT YET VERIFIED
+Status : VERIFIED — but note caveat below
 
+> "We derive a general DPF equation for the frontal human head,
+>  incorporating dependency on wavelength and age, based on
+>  published data."
+
+CAVEAT: The formula is fitted to FRONTAL-head data only. Our
+study targets the OCCIPITAL (visual) cortex. We use it as the
+literature reference for lack of a published occipital fit, but
+acknowledge this limitation explicitly in Methods/Discussion.
+
+The paper itself cites Delpy et al. 1988 for MBLL, supporting
+our co-citation pattern.
+
+
+[scholkmann2014]
+Source : Scholkmann et al., NeuroImage, 2014 — "A review on
+         continuous wave functional near-infrared spectroscopy
+         and imaging instrumentation and methodology"
+Used for: definition of CW-NIRS / NIRI and the [O2Hb]/[HHb]
+          quantification rationale (now also a method-context
+          citation, not just an introductory one)
+
+> "By shining near-infrared (~650 to 950 nm) light into tissue
+>  and measuring the diffuse reflected light at different
+>  wavelengths (lambda), continuous-wave (CW) near-infrared
+>  spectroscopy (NIRS) and imaging (NIRI) enable the
+>  determination of concentration changes in oxy- and
+>  deoxyhemoglobin ([O2Hb], [HHb]), which are related to changes
+>  in hemodynamics and oxygenation. NIRS refers to a measurement
+>  at a single position (i.e., one light-path), whereas NIRI
+>  measures simultaneously at different positions."
+
+
+[tootell1998]
+Source : Tootell et al., 1998 — "The retinotopy of visual
+         spatial attention"
+Used for: V1 retinotopy via wedge-like stimuli
+Status : VERIFIED — but flagged as imperfect fit
+
+> "The comparisons between attention to one target versus
+>  attention to another showed very clear retinotopy, in the
+>  form of increased MR signals at the cortical sites to which
+>  the targets projected... The attention-based retinotopy was
+>  approximately as precise as that revealed in the
+>  (sensory-based) retinotopic maps."
+
+CAVEAT: This paper is primarily about ATTENTION-driven
+retinotopy, not the bottom-up sensory drive a flickering
+wedge produces. It works as a reference but is not the cleanest
+fit. PREFER engel1997 or sereno1995, which used phase-encoded
+rotating wedges/rings to map V1 retinotopy via the bottom-up
+sensory response — exactly the regime we are in.
+
+
+================================================================
+LITERATURE DPF VALUES (from Scholkmann 2013 review, Table)
+For results-section comparison. Note: ALL frontal, adults only.
+================================================================
+
+van der Zee et al. (Adults n=10, age 26):
+    761 nm: 5.93 +/- 0.42
+
+Essenpreis et al. (Adults n=7, age 28):
+    740 nm: 6.59
+    840 nm: 5.82
+
+Duncan et al. (Adults n=100, age 33, frontal, SDS=4.3 cm):
+    690 nm: 6.51 +/- 1.13
+    744 nm: 6.53 +/- 0.99
+    807 nm: 6.26 +/- 0.88
+    832 nm: 5.86 +/- 0.98
+==> Wavelengths nearly match our TD set (670/730/780/830).
+    This is the BEST direct comparison for our DPF results.
+
+Zhao et al. (Adults n=11, age 33, frontal, SDS=3.0 cm):
+    759 nm: 7.5
+    799 nm: 7.25
+    834 nm: 7.0
+
+Bonnery et al. (Adults young n=19, age 24.4):
+    690 nm: 6.2 (5.6 - 6.9)
+    830 nm: 5.8 (5.2 - 6.1)
+
+
+================================================================
+TO VERIFY (paste quote when checked):
+================================================================
 
 [contini2006]
 Source : Contini et al., Applied Optics, 2006
@@ -110,16 +194,18 @@ Status : NOT YET VERIFIED — note this is a webpage; consider
          alternatives
 
 
-[tootell1998] / [engel1997]
-Source : V1 retinotopy with checkerboard / wedge stimuli
-Used for: justifying flickering wedges as a robust V1 driver in
-          the Introduction
-Status : NOT YET VERIFIED — engel1997 is the more commonly cited
-         retinotopy paper; verify either
+[engel1997] / [sereno1995]   (recommended replacement for tootell1998)
+Source : Engel, Glover, Wandell, Cereb. Cortex, 1997
+         Sereno et al., Science, 1995
+Used for: V1 retinotopy via phase-encoded rotating wedges/rings
+          (closer to our flickering-wedge stimulus than tootell1998)
+Status : NOT YET VERIFIED
 
 
 [duncan1995] / [duncan1996]
 Source : Duncan et al., 1995/1996
 Used for: literature DPF reference values for adult head
-Status : NOT YET VERIFIED — confirm whether they report DPF
-         tables (vs methodology only)
+Status : Indirectly verified through Scholkmann 2013 table
+         (Duncan et al., n=100 adults, frontal). Worth pulling
+         the original to cite directly when reporting DPF
+         comparisons.
