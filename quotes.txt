@@ -1,0 +1,125 @@
+================================================================
+CITATION QUOTES — fNIRS Flickering Wedges Report
+================================================================
+Each entry: BibTeX tag, source, what we cite it for, and direct
+quote(s) from the paper that support the claim. Add to this file
+whenever you verify a citation against the original source.
+================================================================
+
+
+[cope1988]
+Source : Cope & Delpy, 1988
+Used for: foundational MBLL / quantification rationale
+
+> "The advantages of such a system are first that it allows
+>  oxygenation changes in the central sections of the brain to be
+>  measured; secondly, since the optical path is more closely
+>  defined, modelling techniques can be applied to predict the
+>  average photon path length, and hence quantitate the measured
+>  oxygenation changes."
+
+
+[delpy1988]
+Source : Delpy et al., 1988 — "Estimation of optical pathlength
+         through tissue from direct time of flight measurement"
+Used for: (1) MBLL foundations
+          (2) DPF computed from mean time of flight (Eq. 1 in our
+              Methods — Monte Carlo justification)
+
+> "The transit times (t) of the photons can be converted into
+>  distance travelled through the medium (d) using the formula
+>  d = ct/n where n is the refractive index of the medium and c
+>  the velocity of light in a vacuum. For water (n = 1.33) the
+>  conversion factor is 0.225 mm/ps and for tissue (n = 1.40)..."
+
+> "A Monte Carlo simulation has shown that the mean of the
+>  integrated TPSF is in excellent agreement with the DPF."
+
+
+[ferrari2012]
+Source : Ferrari & Quaresima, NeuroImage, 2012 — review of fNIRS
+         history and modalities
+Used for: (1) overview of CW / FD / TD modalities
+          (2) neurovascular coupling description in Discussion
+
+> "Three different NIRS techniques are used, each based on a
+>  specific type of illumination: 1) the CW modality which, based
+>  on constant tissue illumination, simply measures light
+>  attenuation through the head; 2) the frequency-domain (FD)
+>  method which, illuminating the head with intensity-modulated
+>  light, measures both attenuation and phase delay of emerging
+>  light; and 3) the time-domain (TD) technique which,
+>  illuminating the head with short pulses of light, detects the
+>  shape of the pulse after propagation through tissues."
+
+> "The increase in O2Hb and the concomitant decrease in HHb
+>  reflect an increase in local arteriolar vasodilatation, which
+>  increases local cerebral blood flow and cerebral blood volume,
+>  a mechanism known as neurovascular coupling. The increased
+>  oxygen transported to the area typically exceeds the local
+>  neuronal rate of oxygen utilization, resulting in an
+>  overabundance of cerebral blood oxygenation in active areas."
+
+
+[scholkmann2014]
+Source : Scholkmann et al., NeuroImage, 2014 — review of CW-fNIRS
+         instrumentation and methodology
+Used for: comparing fNIRS strengths against EEG / fMRI / MEG
+
+> "The strengths of fNIRI compared to other non-invasive
+>  neuroimaging techniques such as EEG, fMRI or MEG include its
+>  portability, potential wearability, ease of application, and
+>  the low purchase and operation costs (especially when compared
+>  to fMRI and MEG), the spatially localized nature of fNIRI in
+>  contrast to EEG and the more complete information (O2Hb in
+>  addition to HHb) compared to fMRI and its compatibility with
+>  other neuroscience techniques."
+
+
+================================================================
+TO VERIFY (paste quote when checked):
+================================================================
+
+[scholkmann2013]
+Source : Scholkmann & Wolf, J. Biomed. Opt., 2013
+Used for: age- and wavelength-dependent DPF formula
+          DPF = alpha + beta*age^gamma + delta*lambda^3
+                + epsilon*lambda^2 + zeta*lambda
+Status : NOT YET VERIFIED
+
+
+[contini2006]
+Source : Contini et al., Applied Optics, 2006
+Used for: TD-NIRS instrumentation / DTOF acquisition
+Status : NOT YET VERIFIED
+
+
+[torricelli2014]
+Source : Torricelli et al., NeuroImage, 2014
+Used for: TD-NIRS for human brain mapping (review)
+Status : NOT YET VERIFIED
+
+
+[prahl1999]
+Source : Prahl, OMLC compilation of hemoglobin extinction
+         coefficients (web reference, derived from Gratzer /
+         Kollias data)
+Used for: HbO / HbR extinction coefficients in MBLL (Methods)
+Status : NOT YET VERIFIED — note this is a webpage; consider
+         Wray et al. 1988 or Matcher et al. 1995 as peer-reviewed
+         alternatives
+
+
+[tootell1998] / [engel1997]
+Source : V1 retinotopy with checkerboard / wedge stimuli
+Used for: justifying flickering wedges as a robust V1 driver in
+          the Introduction
+Status : NOT YET VERIFIED — engel1997 is the more commonly cited
+         retinotopy paper; verify either
+
+
+[duncan1995] / [duncan1996]
+Source : Duncan et al., 1995/1996
+Used for: literature DPF reference values for adult head
+Status : NOT YET VERIFIED — confirm whether they report DPF
+         tables (vs methodology only)
