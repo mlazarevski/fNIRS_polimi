@@ -194,17 +194,26 @@ Status : NOT YET VERIFIED — note this is a webpage; consider
          alternatives
 
 
-[engel1997]   (recommended replacement for tootell1998)
+[engel1997]   VERIFIED   (replacement for tootell1998)
 Source : Engel, Glover, Wandell, Cereb. Cortex, 1997 —
          "Retinotopic organization in human visual cortex and
          the spatial precision of functional MRI"
-Used for: V1 retinotopy via phase-encoded rotating wedges
-Status : PARTIALLY VERIFIED — paper is about visual cortex
-         retinotopy in general (no laterality content, which is
-         fine — we don't need laterality, we need "wedges drive
-         V1 retinotopy"). Need to find the methods quote
-         describing the rotating wedge / phase-encoded stimulus
-         to lock this citation in.
+Used for: V1 retinotopy via phase-encoded ring/wedge stimuli
+
+> "We used a contracting ring stimulus, measured the fMRI
+>  signal in a plane parallel to the calcarine sulcus and
+>  analyzed data along the linear region of interest within
+>  area V1 [...] We expected the stimulus to create a traveling
+>  wave of activity moving from anterior to posterior along the
+>  region of interest. [...] The fMRI signal is a traveling wave
+>  that moves from anterior to posterior portions of cortex."
+
+NOTE: Engel uses contracting RINGS (eccentricity mapping); the
+companion phase-encoded WEDGE stimulus maps polar angle. Both
+are part of the same retinotopic-mapping family that our
+flickering wedge protocol belongs to. The paper establishes
+that phase-encoded retinotopic stimuli reliably drive V1 — the
+exact claim we need.
 
 
 ================================================================
@@ -270,23 +279,48 @@ Used for: TD-NIRS for human brain mapping (review citation)
 Status : NOT YET VERIFIED
 
 
-[prahl1999]
+[prahl1999]   VERIFIED (page) — but our notebook numbers do NOT
+              match Prahl's table.
 Source : Prahl, OMLC compilation of hemoglobin extinction
          coefficients — webpage, https://omlc.org/spectra/hemoglobin/
-Used for: HbO / HbR extinction coefficients used in MBLL
-          (1486 / 3843 at 760 nm; 2526 / 1798 at 850 nm)
-Status : PROBLEMATIC — this is a webpage compilation derived
-         from unpublished Gratzer / Kollias data.
+         Underlying data: Gratzer (Med. Res. Council Labs) and
+         Kollias (Wellman Laboratories, Harvard Med School).
+Page header:
+> "Tabulated Molar Extinction Coefficient for Hemoglobin in
+>  Water. These values for the molar extinction coefficient e
+>  in [cm-1/(moles/liter)] were compiled by Scott Prahl using
+>  data from W. B. Gratzer [...] N. Kollias [...]"
 
-OPTIONS:
-  (a) Cite Prahl OMLC as-is (commonly accepted in fNIRS papers)
-  (b) Cite Gratzer's underlying compilation directly
-  (c) Switch to Matcher et al. 1995 (peer-reviewed, gives values
-      at 690/744/807/832 nm — close to our 760/850, would need
-      to acknowledge interpolation)
-  (d) Cite via mne / mne_nirs default tables (if we end up using
-      that library)
+PRAHL TABLE VALUES (decadic, cm-1/(moles/liter)):
+   wavelength    HbO2     Hb
+       760       586      1548.52
+       850      1058       691.32
 
-The hemoglobin redox paper you found is NOT a substitute — it
-covers oxy/met/ferryl Hb in vascular pathology, not the HbO/HbR
-extinction values for NIR brain imaging.
+CONVERSION TO NATURAL LOG (multiply by ln 10 = 2.303):
+   wavelength    HbO2     Hb
+       760      1349.6   3566.2
+       850      2436.6   1592.1
+
+CRITICAL DISCREPANCY: Our notebook MBLL cell uses
+   E = [[1486.5869, 3843.707],   # 760 nm
+        [2526.391,  1798.643]]   # 850 nm
+
+These do NOT match Prahl decadic OR Prahl-times-ln(10). The
+values are close to (but not equal to) Prahl x 2.303, suggesting
+they came from a different but related compilation. Most likely
+candidates:
+  - Cope 1991 PhD thesis values
+  - MNE-NIRS internal extinction table (which is its own
+    spline-interpolated source)
+  - A different version of Gratzer's data
+
+ACTION REQUIRED before submission: either
+  (a) Replace the notebook E matrix with Prahl values (keep
+      consistent with the citation), or
+  (b) Identify the actual source of 1486/3843/2526/1798 and
+      cite that instead, or
+  (c) Use MNE-NIRS's beer_lambert_law and cite the MNE paper.
+
+Recommendation: (a) — go with Prahl's table as written (decadic
+or natural log, depending on how you compute OD), since you've
+already verified the source.
