@@ -63,9 +63,10 @@ def pos_region(label):
 N_TISSUE = 1.4
 V_TISSUE = 0.3 / N_TISSUE  # mm/ps
 
-# Extinction coefficients (1/cm/M) from Prahl/OMLC
+# Decadic molar extinction coefficients (cm^-1 / M) from Prahl/OMLC
+# For use with log10-based OD: OD = -log10(I/I0)
 # Rows: [760nm, 850nm]; Columns: [HbO, HbR]
 EXT_COEFFS = np.array([
-    [1486.5865, 3843.707],
-    [2526.391,  1798.643],
+    [586.0,    1548.52],
+    [1058.0,   691.32],
 ])
