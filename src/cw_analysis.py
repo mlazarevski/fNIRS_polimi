@@ -131,7 +131,7 @@ def preprocess(data):
 
     eps = 1e-12
     I0 = d.mean(axis=0, keepdims=True)
-    OD_raw = -np.log((d + eps) / (I0 + eps))
+    OD_raw = -np.log10((d + eps) / (I0 + eps))
 
     # Motion artifact detection
     dod_dt = np.diff(OD_raw[:, :n_pairs], axis=0)
@@ -221,13 +221,15 @@ def compute_hemoglobin(data, OD_filt):
     index_c, stim_info = data["index_c"], data["stim_info"]
     src_pos, det_pos = data["src_pos"], data["det_pos"]
 
-    DPF_760 = 6.0
-    DPF_850 = 6.0
+    td_res = np.load(os.path.join(OUT_DIR, "td_results.npz"))
+    dpf_td_mean = td_res["dpf_all"].mean(axis=0)
+    DPF_760 = float(np.interp(760, TD_WAVELENGTHS, dpf_td_mean))
+    DPF_850 = float(np.interp(850, TD_WAVELENGTHS, dpf_td_mean))
 
     print("\n" + "=" * 70)
     print("MBLL: HEMOGLOBIN CONCENTRATION CHANGES")
     print("=" * 70)
-    print("DPF (fixed, matching MATLAB pipeline): 760nm={:.2f}, 850nm={:.2f}".format(DPF_760, DPF_850))
+    print("DPF (TD-derived, interpolated): 760nm={:.2f}, 850nm={:.2f}".format(DPF_760, DPF_850))
 
     HbO = np.zeros((len(t), n_pairs))
     HbR = np.zeros((len(t), n_pairs))
